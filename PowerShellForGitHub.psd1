@@ -7,7 +7,7 @@
     CompanyName = 'Microsoft Corporation'
     Copyright = 'Copyright (C) Microsoft Corporation.  All rights reserved.'
 
-    ModuleVersion = '0.7.0'
+    ModuleVersion = '0.8.0'
     Description = 'PowerShell wrapper for GitHub API'
 
     # Script module or binary module file associated with this manifest.
@@ -48,7 +48,6 @@
         'Add-GitHubIssueLabel',
         'Backup-GitHubConfiguration',
         'Clear-GitHubAuthentication',
-        'ConvertFrom-Markdown',
         'Get-GitHubAssignee',
         'Get-GitHubCloneTraffic',
         'Get-GitHubCodeOfConduct',
@@ -148,6 +147,8 @@
             # A URL to the main website for this project.
             ProjectUri = 'https://aka.ms/PowerShellForGitHub'
 
+            Prerelease = 'withGHE'
+
             # A URL to an icon representing this module.
             # IconUri = ''
 
@@ -177,4 +178,3 @@
     # HelpInfo URI of this module
     # HelpInfoURI = ''
 }
-
