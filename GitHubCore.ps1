@@ -151,7 +151,7 @@ function Invoke-GHRestMethod
     # we'll just always continue the existing one...
     $stopwatch.Start()
 
-    $gitHubApiUrl = "https://api.$(Get-GetHubConfiguration -Name "GitHubBaseUrl")"
+    $gitHubApiUrl = "https://api.$(Get-GitHubConfiguration -Name "GitHubBaseUrl")"
 
     $url = "$gitHubApiUrl/$UriFragment"
 
@@ -734,7 +734,7 @@ function Split-GitHubUri
         repositoryName = [String]::Empty
     }
 
-    $gitHubUrlBase = $(Get-GetHubConfiguration -Name "GitHubBaseUrl")
+    $gitHubUrlBase = $(Get-GitHubConfiguration -Name "GitHubBaseUrl")
 
     if (($Uri -match "^https?://(?:www.)?$gitHubUrlBase/([^/]+)/?([^/]+)?(?:/.*)?$") -or
         ($Uri -match "^https?://api.$gitHubUrlBase/repos/([^/]+)/?([^/]+)?(?:/.*)?$"))
